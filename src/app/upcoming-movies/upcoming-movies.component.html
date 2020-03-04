@@ -1,7 +1,9 @@
+<div class="upcomingMovies">
 <h1>Upcoming Movies</h1>
 
 <div *ngIf="spinnerFlag" class="spinner large"></div>
 
 <div *ngIf="movies">
     <app-movie-detail *ngFor="let movie of movies" [movie]="movie"></app-movie-detail>
+</div>
 </div>
