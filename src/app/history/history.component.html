@@ -1,7 +1,10 @@
+
 <div *ngIf="history">
-  <ul>
-      <li *ngFor="let historyItem of history">
-          <p>You Searched <strong>{{historyItem.search}}</strong> On {{historyItem.date}} </p>
-      </li>
-  </ul>
+  <div >
+    <app-history-item 
+    *ngFor="let historyItem of history"
+    [historyItem]="historyItem" >
+  </app-history-item>
+  </div>
+
 </div>

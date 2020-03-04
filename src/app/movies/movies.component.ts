@@ -13,18 +13,22 @@ export class MoviesComponent implements OnInit {
 
   movieName: string;
   movies: Movie[];
+  spinnerFlag : boolean = false;
+  
   constructor(private movieService: MoviesService) { }
   ngOnInit(): void {
   }
   getMovieByName(name: string){
     return this.movieService.getMoviesByName(name)
     .subscribe(movies => {
-      console.log('movies.results', movies);
-      this.movies = movies.filter(movie => movie.title)})
+      this.movies = movies.filter(movie => movie.title);
+      this.spinnerFlag = false;
+    })
 
   }
 
   onSubmit(): void{
+    this.spinnerFlag = true
     this.getMovieByName(this.movieName);
     this.saveInHistory();
   }

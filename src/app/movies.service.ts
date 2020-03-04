@@ -28,7 +28,12 @@ export class MoviesService {
 
   getTopRatedMovies(): Observable<Movie[]> {
     const moviesUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${this.apiKey}&language=en-US&page=1`
-    
+    return  this.http.get<{results : Movie[]}>(moviesUrl)
+    .pipe(
+      map(result=> result.results));
+    }
+  getUpcomingMovies(): Observable<Movie[]> {
+    const moviesUrl = `https://api.themoviedb.org/3/movie/upcoming?api_key=${this.apiKey}&language=en-US&page=1`
     return  this.http.get<{results : Movie[]}>(moviesUrl)
     .pipe(
       map(result=> result.results));
