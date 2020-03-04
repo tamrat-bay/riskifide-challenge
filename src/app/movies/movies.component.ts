@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Movie } from "../model/Movie";
-import { MoviesService } from "../movies.service";
+import { Movie } from '../model/Movie';
+import {MoviesService} from '../movies.service';
+
+
 
 @Component({
   selector: 'app-movies',
@@ -8,23 +10,28 @@ import { MoviesService } from "../movies.service";
   styleUrls: ['./movies.component.scss']
 })
 export class MoviesComponent implements OnInit {
-  movies : Movie[] = [];
-  movieName : string;
-
-  constructor( private movieService:MoviesService  ) { }
+ 
+  movieName:string;
+  movies:Movie[];
+  constructor(private movieService: MoviesService) { }
 
   ngOnInit(): void {
-    
+
   }
 
-  // getMovieByName(name:string) {
-  //   return this.movieService.getMoviesByName(name)
-  //   .subscribe(movies => console.log(movies)
-  //   )
-  // }
-  // onSubmit():void {
-  //   console.log(this.movieName);
+  getMovieByName(name:string){
+    return this.movieService.getMoviesByName(name)
+    .subscribe(movies => {
+      console.log('movies.results',movies);
+      
+      this.movies = movies.results.filter(movie => movie.title)})
     
-  // }
+
+  }
+  onSubmit():void {
+ 
+    this.getMovieByName(this.movieName)
+    
+  }
 
 }

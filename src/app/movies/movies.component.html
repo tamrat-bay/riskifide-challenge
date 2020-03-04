@@ -1,5 +1,9 @@
 <p>movies works!</p>
 
-<input type="text" required  placeholder="Search Movie" >
+<input type="text" required name="searchMovie" placeholder="Search Movie" [(ngModel)]="movieName">
 <br>
-<button>Search</button>
+<button (click)="onSubmit()">Search</button>
+
+<div *ngIf="movies">
+<app-movie-detail *ngFor="let movie of movies" [movie]="movie"></app-movie-detail>
+</div>
