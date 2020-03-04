@@ -1,5 +1,5 @@
 <p>movies works!</p>
 
-<input type="text" required name="searchMovie" placeholder="Search Movie">
+<input type="text" required name="searchMovie" placeholder="Search Movie" [(ngModel)]="movieName">
 <br>
-<button>Search</button>
+<button (click)="onSubmit()">Search</button>
