@@ -17,15 +17,21 @@ export class MoviesService {
   getMoviesByName(inputText): Observable<Movie[]> {
     const moviesUrl = `https://api.themoviedb.org/3/search/multi?api_key=${this.apiKey}&query=${inputText}&language=en-US&page=1&include_adult=false`
     return  this.http.get<{results: Movie[]}>(moviesUrl).pipe(
-      map((result) => {
-        return result.results ;
-      })
+      map(result => result.results)
     );
     }
 
   getMoviesById(movie_id): Observable<Movie> {
     const moviesUrl = `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${this.apiKey}&language=en-US`
     return  this.http.get<Movie>(moviesUrl);
+    }
+
+  getTopRatedMovies(): Observable<Movie[]> {
+    const moviesUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${this.apiKey}&language=en-US&page=1`
+    
+    return  this.http.get<{results : Movie[]}>(moviesUrl)
+    .pipe(
+      map(result=> result.results));
     }
 
 }

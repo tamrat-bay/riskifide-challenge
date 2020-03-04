@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HistoryComponent } from './history/history.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { TopRatedMoviesComponent } from './top-rated-movies/top-rated-movies.component';
 
 
 
@@ -20,7 +21,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
     MovieDetailComponent,
     SingleMovieComponent,
     HistoryComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    TopRatedMoviesComponent
   ],
   imports: [
     BrowserModule,

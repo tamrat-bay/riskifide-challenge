@@ -4,6 +4,7 @@ import { MoviesComponent } from './movies/movies.component';
 import { SingleMovieComponent } from './single-movie/single-movie.component';
 import { HistoryComponent } from './history/history.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { TopRatedMoviesComponent } from './top-rated-movies/top-rated-movies.component';
 
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path: 'movies', component: MoviesComponent},
   {path: 'history', component: HistoryComponent},
   {path: 'movies/:id', component: SingleMovieComponent},
-  {path: '**', component: NotfoundComponent},
+  {path: 'toprated', component: TopRatedMoviesComponent},
+  {path: '**', component: NotfoundComponent}
 ];
 
 @NgModule({

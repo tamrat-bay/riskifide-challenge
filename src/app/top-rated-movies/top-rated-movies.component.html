@@ -1,0 +1,5 @@
+<h1>Top Rated Movies</h1>
+
+<div *ngIf="movies">
+    <app-movie-detail *ngFor="let movie of movies" [movie]="movie"></app-movie-detail>
+</div>
