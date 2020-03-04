@@ -1,0 +1,9 @@
+<p>watch-later works!</p>
+<button (click)="goBack()">Go Back</button>
+
+<div class="Watchlater" *ngFor="let movie of movies" >
+    <h2>{{ movie.title }}</h2>
+    <img [src]="imgUrl+movie.image" />
+    <!-- <p>Overview : {{ movie.overview }}</p> -->
+    <!-- <p>Release Date {{ movie.release_date }}</p> -->
+</div>

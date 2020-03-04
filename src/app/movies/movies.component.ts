@@ -40,8 +40,5 @@ export class MoviesComponent implements OnInit {
       const toSaveArray =[ {search: this.movieName, date : date} ]
       localStorage.setItem('searchHistory', JSON.stringify(toSaveArray))
     }
-
-
   }
-
   }

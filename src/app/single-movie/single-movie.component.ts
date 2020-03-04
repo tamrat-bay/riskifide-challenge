@@ -15,25 +15,24 @@ export class SingleMovieComponent implements OnInit {
   imgUrl = "https://image.tmdb.org/t/p/w500";
 
   constructor( 
-    private activatedRoute : ActivatedRoute,
-    private moviesService : MoviesService
-    
+    private activatedRoute: ActivatedRoute,
+    private moviesService: MoviesService
     ) { }
 
   ngOnInit() {
-    this.getMovieById()
+    this.getMovieById();
   }
- getMovieById() :void {
+ getMovieById(): void {
    const id = this.activatedRoute.snapshot.paramMap.get('id');
    console.log('movie id',id);
-   
-     this.moviesService.getMoviesById(id).subscribe(movie => {
-      console.log('Movie By Id',movie);
-       
-     return this.movie = movie})
+
+   this.moviesService.getMoviesById(id).subscribe(movie => {
+      console.log('Movie By Id', movie);
+      return this.movie = movie;
+    })
  }
- goBack() : void{
-   history.back()
+ goBack(): void {
+   history.back();
  }
-  
+
 }
