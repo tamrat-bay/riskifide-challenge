@@ -10,7 +10,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HistoryComponent } from './history/history.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+<<<<<<< HEAD
 import { WatchLaterComponent } from './watch-later/watch-later.component';
+=======
+import { TopRatedMoviesComponent } from './top-rated-movies/top-rated-movies.component';
+>>>>>>> 444be5959b6905de9889a055d681edd8d0367fa2
 
 
 
@@ -22,7 +26,11 @@ import { WatchLaterComponent } from './watch-later/watch-later.component';
     SingleMovieComponent,
     HistoryComponent,
     NotfoundComponent,
+<<<<<<< HEAD
     WatchLaterComponent
+=======
+    TopRatedMoviesComponent
+>>>>>>> 444be5959b6905de9889a055d681edd8d0367fa2
   ],
   imports: [
     BrowserModule,
