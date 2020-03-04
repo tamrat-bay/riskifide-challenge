@@ -13,10 +13,16 @@ export class MoviesService {
 
   getMoviesByName(inputText): Observable<Movie[]> {
     const apiKey = "d759a614b16c0c1c0295b4313e94aeec";
+<<<<<<< HEAD
     // complete the movie img
     // const imgUrl = "https://image.tmdb.org/t/p/w500";
 
     return this.http.get<Movie[]>(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${inputText}&language=en-US&page=1&include_adult=false`);
+=======
+    //! complete the movie img
+    const imgUrl = "https://image.tmdb.org/t/p/w500";
+    return  this.http.get<Movie[]>(`https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${inputText}&language=en-US&page=1&include_adult=false`);
+>>>>>>> 0f5de7e7778dbe20d1d9b47408b33b67c4e21719
 
     }
 
