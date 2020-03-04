@@ -10,9 +10,9 @@ import { MoviesService } from '../movies.service';
   styleUrls: ['./single-movie.component.scss']
 })
 export class SingleMovieComponent implements OnInit {
-  movie : Movie;
+  movie: Movie;
 
-  imgUrl = "https://image.tmdb.org/t/p/w500";
+  imgUrl = 'https://image.tmdb.org/t/p/w500';
 
   constructor( 
     private activatedRoute: ActivatedRoute,
@@ -24,7 +24,7 @@ export class SingleMovieComponent implements OnInit {
   }
  getMovieById(): void {
    const id = this.activatedRoute.snapshot.paramMap.get('id');
-   console.log('movie id',id);
+   console.log('movie id', id);
 
    this.moviesService.getMoviesById(id).subscribe(movie => {
       console.log('Movie By Id', movie);

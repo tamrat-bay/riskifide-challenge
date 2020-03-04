@@ -3,7 +3,6 @@
 
 <div class="Watchlater" *ngFor="let movie of movies" >
     <h2>{{ movie.title }}</h2>
-    <img [src]="imgUrl+movie.image" />
+    <img [src]="imgUrl+movie.poster_path" />
     <!-- <p>Overview : {{ movie.overview }}</p> -->
     <!-- <p>Release Date {{ movie.release_date }}</p> -->
-</div>

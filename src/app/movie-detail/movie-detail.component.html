@@ -1,4 +1,5 @@
 
+
 <div class="movieDetail" >
 <h2>{{ movie.title }}</h2>
 <img [src]="imgUrl+movie.poster_path" />
@@ -6,4 +7,7 @@
 <p>Release Date {{ movie.release_date }}</p>
 <button (click)="onSelect(movie.id)">More Details</button>
 <button (click)="Watchlater(movie)">Wish list</button>
+<div style="background-color: green;height: 100px;" *ngIf="flag">
+    <h3>Added To Watch List</h3>
+</div>
 </div>
