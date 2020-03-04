@@ -38,14 +38,14 @@ const WatchlaterItems = localStorage.getItem('Watchlater');
 if (WatchlaterItems) {
       const data = JSON.parse(WatchlaterItems);
       data.push(toSave);
-      localStorage.setItem('Watchlater', JSON.stringify(data))
+      localStorage.setItem('Watchlater', JSON.stringify(data));
       this.flag = !false;
       setTimeout(() => {
       this.flag = false;
       window.location.href = '/Watchlater';
       }, 1500);
     } else {
-      const toSaveArray =[toSave];
+      const toSaveArray = [toSave];
       localStorage.setItem('Watchlater', JSON.stringify(toSaveArray));
       this.flag = !false;
       setTimeout(() => {

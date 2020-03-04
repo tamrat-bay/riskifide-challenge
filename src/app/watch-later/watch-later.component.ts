@@ -16,7 +16,7 @@ export class WatchLaterComponent implements OnInit {
 
   }
 
-  getwatchlater(): void{
+  getwatchlater(): void {
     const WatchList = JSON.parse(localStorage.getItem('Watchlater'));
     this.movies = WatchList;
     console.log(WatchList);
