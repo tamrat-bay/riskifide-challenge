@@ -1,2 +1,8 @@
-<p>Name : {{ movie.title }}</p>
-<p>Name : {{ movie.overview }}</p>
+
+<div class="movieDetail" >
+<h2>{{ movie.title }}</h2>
+<img [src]="imgUrl+movie.poster_path" />
+<p>Overview : {{ movie.overview }}</p>
+<p>Release Date {{ movie.release_date }}</p>
+<button (click)="onSelect(movie.id)">More Details</button>
+</div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie } from '../model/Movie';
-import {MoviesService} from '../movies.service';
+import { MoviesService } from '../movies.service';
 
 
 
@@ -24,13 +24,27 @@ export class MoviesComponent implements OnInit {
     .subscribe(movies => {
       console.log('movies.results',movies);
       
-      this.movies = movies.results.filter(movie => movie.title)})
+      this.movies = movies.filter(movie => movie.title)})
     
 
   }
-  onSubmit():void {
- 
-    this.getMovieByName(this.movieName)
+  onSubmit(): void{
+    this.getMovieByName(this.movieName);
+    this.saveInHistory () 
+  }
+  saveInHistory () :void {
+    let historyItems = localStorage.getItem('searchHistory');
+    let date = new Date().toDateString();
+    let toSave = {search:this.movieName, date : date}
+    if (historyItems) {
+      let data = JSON.parse(historyItems);
+      data.push(toSave);
+      localStorage.setItem("searchHistory", JSON.stringify(data))
+    }else{
+      let toSave =[ {search:this.movieName, date : date} ]
+      localStorage.setItem("searchHistory", JSON.stringify(toSave))
+    }
+
     
   }
 
