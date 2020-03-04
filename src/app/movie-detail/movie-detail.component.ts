@@ -26,7 +26,7 @@ export class MovieDetailComponent implements OnInit {
 
 Watchlater(itamData): void {
 
-console.log(itamData,'Watchlater');
+console.log(itamData, 'Watchlater');
 const toSave = {
   id: itamData.id,
   poster_path: itamData.poster_path,
@@ -40,13 +40,18 @@ if (WatchlaterItems) {
       data.push(toSave);
       localStorage.setItem('Watchlater', JSON.stringify(data))
       this.flag = !false;
-      setTimeout(()=> {
+      setTimeout(() => {
       this.flag = false;
       window.location.href = '/Watchlater';
       }, 1500);
     } else {
       const toSaveArray =[toSave];
-      localStorage.setItem('Watchlater', JSON.stringify(toSaveArray))
+      localStorage.setItem('Watchlater', JSON.stringify(toSaveArray));
+      this.flag = !false;
+      setTimeout(() => {
+      this.flag = false;
+      window.location.href = '/Watchlater';
+      }, 1500);
     }
 
   }
