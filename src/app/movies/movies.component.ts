@@ -14,19 +14,22 @@ export class MoviesComponent implements OnInit {
   constructor(private movieService: MoviesService) { }
 
   ngOnInit(): void {
-
+    this.onSubmit()
   }
 
 
   getMovieByName(name:string){
     return this.movieService.getMoviesByName(name)
-    .subscribe(movies => this.movies = movies.results)
-    
+    .subscribe(movies => {
 
+    });
+  
   }
   onSubmit():void {
  
     this.getMovieByName(this.movieName)
+    console.log(this.movies);
+
   }
 
 }
