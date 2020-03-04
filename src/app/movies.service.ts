@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Movie } from './model/Movie'
+import { Movie } from './model/Movie';
 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -18,7 +18,7 @@ export class MoviesService {
     const moviesUrl = `https://api.themoviedb.org/3/search/multi?api_key=${this.apiKey}&query=${inputText}&language=en-US&page=1&include_adult=false`
     return  this.http.get<{results: Movie[]}>(moviesUrl).pipe(
       map((result) => {
-        return result.results 
+        return result.results ;
       })
     );
     }

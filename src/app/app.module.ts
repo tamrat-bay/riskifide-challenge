@@ -9,6 +9,7 @@ import { SingleMovieComponent } from './single-movie/single-movie.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HistoryComponent } from './history/history.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 
 
@@ -18,7 +19,8 @@ import { HistoryComponent } from './history/history.component';
     MoviesComponent,
     MovieDetailComponent,
     SingleMovieComponent,
-    HistoryComponent
+    HistoryComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,

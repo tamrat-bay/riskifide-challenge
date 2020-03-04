@@ -12,14 +12,15 @@ import { Router } from '@angular/router';
 export class MovieDetailComponent implements OnInit {
 
   @Input() movie: Movie;
-   imgUrl = "https://image.tmdb.org/t/p/w500";
-  constructor( private router : Router ) { }
+   imgUrl = 'https://image.tmdb.org/t/p/w500';
+  constructor( private router: Router ) { }
 
   ngOnInit() {
+
   }
   onSelect(id): void {
        console.log(id);
-       this.router.navigate(['/movies', id])
+       this.router.navigate(['/movies', id]);
   }
 
 }
