@@ -4,6 +4,8 @@
     <img [src]="imgUrl+movie.poster_path" />
     <p>Overview : {{ movie.overview }}</p>
     <p>Release Date {{ movie.release_date }}</p>
+    <p>status {{ movie.status }}</p>
+    <p><a href="{{ movie.homepage }}"> Homepage </a> </p>
     <button (click)="onSelect(movie.id)">More Details</button>
     <button (click)="goBack()">Go Back</button>
 </div>

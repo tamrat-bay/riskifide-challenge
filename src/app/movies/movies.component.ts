@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie } from '../model/Movie';
-import { NgForm } from '@angular/forms';
 import { MoviesService } from '../movies.service';
 
 
@@ -14,7 +13,7 @@ export class MoviesComponent implements OnInit {
   movieName: string;
   movies: Movie[];
   spinnerFlag : boolean = false;
-  
+
   constructor(private movieService: MoviesService) { }
   ngOnInit(): void {
   }

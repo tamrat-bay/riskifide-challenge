@@ -1,11 +1,24 @@
 
-<div class="nav">
-<nav>
-    <a href="#" routerLink="/movies" > Movies </a>  
-    <a href="#" routerLink="/history"> History </a>  
-    <a href="#" routerLink="/Watchlater"> Watch list </a>  
-</nav>
-</div>
 
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item ">
+        <a href="#" class="nav-link" routerLink="/movies" > Movies </a>  
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link" routerLink="/history"> History </a>  
+      </li>
+
+      <li class="nav-item">
+        <a href="#" class="nav-link" routerLink="/Watchlater"> Watch list </a>  
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link" routerLink="/toprated">Top Rated Movies </a>  
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link" routerLink="/upcoming"> Upcoming Movies </a>  
+      </li>
+    </ul>
+  </nav>
 <router-outlet></router-outlet>
 
