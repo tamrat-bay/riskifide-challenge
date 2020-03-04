@@ -13,6 +13,7 @@ export class MovieDetailComponent implements OnInit {
 
   @Input() movie: Movie;
    imgUrl = 'https://image.tmdb.org/t/p/w500';
+  flag = false;
   constructor( private router: Router ) { }
 
   ngOnInit() {
@@ -38,10 +39,16 @@ if (WatchlaterItems) {
       const data = JSON.parse(WatchlaterItems);
       data.push(toSave);
       localStorage.setItem('Watchlater', JSON.stringify(data))
+      this.flag = !false;
+      setTimeout(()=> {
+      this.flag = false;
+      window.location.href = '/Watchlater';
+      }, 1500);
     } else {
       const toSaveArray =[toSave];
       localStorage.setItem('Watchlater', JSON.stringify(toSaveArray))
     }
+
   }
 
 }

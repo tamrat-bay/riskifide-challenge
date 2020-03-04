@@ -8,8 +8,7 @@ import { Movie } from '../model/Movie';
 })
 export class WatchLaterComponent implements OnInit {
   movies: Movie[] = [];
-  imgUrl = "https://image.tmdb.org/t/p/w500";
-
+  imgUrl = 'https://image.tmdb.org/t/p/w500';
   constructor() { }
 
   ngOnInit() {
@@ -22,6 +21,7 @@ export class WatchLaterComponent implements OnInit {
     this.movies = WatchList;
     console.log(WatchList);
   }
-  
-
+  goBack(): void {
+    history.back();
+  }
 }
