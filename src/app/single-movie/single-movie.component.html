@@ -1,1 +1,9 @@
-<p>single-movie works!</p>
+
+<div class="singleMovie" *ngIf="movie" >
+    <h2>{{ movie.title }}</h2>
+    <img [src]="imgUrl+movie.poster_path" />
+    <p>Overview : {{ movie.overview }}</p>
+    <p>Release Date {{ movie.release_date }}</p>
+    <button (click)="onSelect(movie.id)">More Details</button>
+    <button (click)="goBack()">Go Back</button>
+</div>
