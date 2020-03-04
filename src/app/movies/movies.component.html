@@ -1,11 +1,13 @@
 
 <div class="movies">
     <button routerLink="/toprated">Top Rated Movies</button>
+    <button routerLink="/upcoming">Upcoming Movies</button>
 <form (ngSubmit)="onSubmit()" novalidate>
     <input type="text" required name="searchMovie" placeholder="Movie Name..." [(ngModel)]="movieName">
     <button>Submit</button>
 </form>
 
+<div *ngIf="spinnerFlag" class="spinner large"></div>
 
 <div *ngIf="movies">
 <app-movie-detail *ngFor="let movie of movies" [movie]="movie"></app-movie-detail>

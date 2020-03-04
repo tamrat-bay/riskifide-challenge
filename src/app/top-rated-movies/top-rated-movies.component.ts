@@ -9,13 +9,19 @@ import { Movie } from '../model/Movie';
 })
 export class TopRatedMoviesComponent implements OnInit {
 movies : Movie[] = [];
+spinnerFlag : boolean = false;
+
+
   constructor( private moviesService : MoviesService) { }
 
   ngOnInit() {
+    this.spinnerFlag = true;
     this.getTopRatedMovies() ;
   }
 getTopRatedMovies () :void{
-  this.moviesService.getTopRatedMovies().subscribe(movies => this.movies = movies);
+  this.moviesService.getTopRatedMovies().subscribe(movies => {
+    this.spinnerFlag = false;
+    return this.movies = movies});
 
 }
 

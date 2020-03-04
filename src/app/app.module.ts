@@ -12,6 +12,8 @@ import { HistoryComponent } from './history/history.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { WatchLaterComponent } from './watch-later/watch-later.component';
 import { TopRatedMoviesComponent } from './top-rated-movies/top-rated-movies.component';
+import { UpcomingMoviesComponent } from './upcoming-movies/upcoming-movies.component';
+import { HistoryItemComponent } from './history-item/history-item.component';
 
 
 
@@ -24,7 +26,9 @@ import { TopRatedMoviesComponent } from './top-rated-movies/top-rated-movies.com
     HistoryComponent,
     NotfoundComponent,
     WatchLaterComponent,
-    TopRatedMoviesComponent
+    TopRatedMoviesComponent,
+    UpcomingMoviesComponent,
+    HistoryItemComponent
   ],
   imports: [
     BrowserModule,

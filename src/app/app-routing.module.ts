@@ -6,6 +6,7 @@ import { HistoryComponent } from './history/history.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { WatchLaterComponent } from './watch-later/watch-later.component';
 import { TopRatedMoviesComponent } from './top-rated-movies/top-rated-movies.component';
+import { UpcomingMoviesComponent } from './upcoming-movies/upcoming-movies.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'movies/:id', component: SingleMovieComponent},
   {path: 'Watchlater', component: WatchLaterComponent},
   {path: 'toprated', component: TopRatedMoviesComponent},
+  {path: 'upcoming', component: UpcomingMoviesComponent},
   {path: '**', component: NotfoundComponent}
 ];
 
