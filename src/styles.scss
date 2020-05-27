@@ -16,7 +16,66 @@ div.spinner {
         border-width: 5px;
     }
   }
-  @-webkit-keyframes loader-spin {
+  @keyframes loader-spin {
     from   {  transform: rotate(0deg); }
     to     {  transform: rotate(360deg); }
   }
+
+  .card {
+    width: 19rem;
+    float: none;
+    margin: 10px auto;
+    height: 600px;
+}
+img.card-img-top {
+  flex-shrink: 0;
+  width: 70%;
+  margin: 3px auto;
+}
+
+p.card-text {
+   height: 100px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+ h5.card-title {
+  margin-bottom: 0.35rem;
+  height: 46px;
+  overflow: hidden;
+} 
+div.card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 0.25rem;
+}
+div.movie_buttons{
+  background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.movie_buttons,button{
+  width: 100%;
+  background-color: #343a40;
+  color: white;
+  font-family: cursive;
+  position: relative;
+  bottom: 9px;
+}
+.movieContainer{
+  width: 90%;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin: 12px;
+}
+.button {
+  width: 183px;
+  height: 40px;
+  display: block;
+  margin: 20px auto !important;
+  border-radius: 5px !important;
+}

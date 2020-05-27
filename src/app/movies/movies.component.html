@@ -1,13 +1,15 @@
-<div class="movies">
+<div class="movies movieContainer">
 <form (ngSubmit)="onSubmit()" novalidate>
     <input type="text" required name="searchMovie" placeholder="Movie Name..." [(ngModel)]="movieName">
-    <button>Submit</button>
+    <button class="button">Submit</button>
 </form>
 
 <div *ngIf="spinnerFlag" class="spinner large"></div>
 
-<div *ngIf="movies">
-<app-movie-detail *ngFor="let movie of movies" [movie]="movie"></app-movie-detail>
+<div *ngIf="movies" class="moviesList">
+    <div class="row" *ngFor="let movie of movies" >
+<app-movie-detail  class="col-sm" *ngFor="let movie of movies" [movie]="movie"></app-movie-detail>
+    </div>
 </div>
 
 </div>

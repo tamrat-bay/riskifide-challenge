@@ -1,23 +1,16 @@
-<!-- <div class="movieDetail">
-    <img [src]="imgUrl+movie.poster_path" />
-    <h2>{{ movie.title }}</h2>
-    <p>Overview : {{ movie.overview }}</p>
-    <p>Release Date {{ movie.release_date }}</p>
-    <br>
-    <button (click)="onSelect(movie.id)">More Details</button>
-    <button (click)="Watchlater(movie)">Wish list</button>
-    <div style="background-color: green;height: 100px;" *ngIf="flag">
-        <h3>Added To Watch List</h3>
-    </div>
-</div> -->
-<div class="card">
+
+<div class="card movie">
     <img class="card-img-top" [src]="imgUrl+movie.poster_path" alt="Card image cap">
-    <div class="card-body ">
+    <div class="card-body">
         <h5 class="card-title">{{ movie.title }}</h5>
         <p class="card-text">Overview : {{ movie.overview }}.</p>
         <p>Release Date {{ movie.release_date }}</p>
+
+    <div class="movie_buttons">
         <button (click)="onSelect(movie.id)">More Details</button>
         <button (click)="Watchlater(movie)">Wish list</button>
+    </div>
+        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
     </div>
     <div style="background-color: green;height: 100px;" *ngIf="flag">
         <h3>Added To Watch List</h3>

@@ -1,7 +1,12 @@
+<div class="movieContainer"> 
 <h1>Top Rated Movies</h1>
 
 <div *ngIf="spinnerFlag" class="spinner large"></div>
 
 <div *ngIf="movies">
-    <app-movie-detail *ngFor="let movie of movies" [movie]="movie"></app-movie-detail>
+    <div class="row" >
+    <app-movie-detail class="col-sm" *ngFor="let movie of movies" [movie]="movie"></app-movie-detail>
+    </div>
+</div>
+
 </div>
