@@ -11,7 +11,7 @@
     "heroku-postbuild": "ng build --prod"
   },
   "engines": {
-    "node": "v13.0.1",
+    "node": "13.0.1",
     "npm": "6.12.0"
   },
   "private": true,
